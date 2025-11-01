@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "charmncrafts-arsenal-and-armory:item/bedrock_hoe"
+  }
+}
