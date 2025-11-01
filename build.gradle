@@ -22,7 +22,7 @@ loom {
 	splitEnvironmentSourceSets()
 
 	mods {
-		"charmncrafts-arsenal-and-armory" {
+		"charmncrafts-gears-and-gadgets" {
 			sourceSet sourceSets.main
 			sourceSet sourceSets.client
 		}

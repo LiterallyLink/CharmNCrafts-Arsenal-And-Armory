@@ -1,8 +1,8 @@
 {
 	"schemaVersion": 1,
-	"id": "charmncrafts-arsenal-and-armory",
+	"id": "charmncrafts-gears-and-gadgets",
 	"version": "${version}",
-	"name": "charmncrafts-arsenal and armory",
+	"name": "CharmNCrafts Gears and Gadgets",
 	"description": "This is an example description! Tell everyone what your mod is about!",
 	"authors": [
 		"Me!"
@@ -12,23 +12,23 @@
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
 	"license": "CC0-1.0",
-	"icon": "assets/charmncrafts-arsenal-and-armory/icon.png",
+	"icon": "assets/charmncrafts-gears-and-gadgets/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"chamncraft.arsenal.CharmncraftsarsenalAndArmory"
+			"chamncraft.gears.CharmncraftsGearsAndGadgets"
 		],
 		"client": [
-			"chamncraft.arsenal.CharmncraftsarsenalAndArmoryClient"
+			"chamncraft.gears.CharmncraftsGearsAndGadgetsClient"
 		],
 		"fabric-datagen": [
-			"chamncraft.arsenal.CharmncraftsarsenalAndArmoryDataGenerator"
+			"chamncraft.gears.CharmncraftsGearsAndGadgetsDataGenerator"
 		]
 	},
 	"mixins": [
-		"charmncrafts-arsenal-and-armory.mixins.json",
+		"charmncrafts-gears-and-gadgets.mixins.json",
 		{
-			"config": "charmncrafts-arsenal-and-armory.client.mixins.json",
+			"config": "charmncrafts-gears-and-gadgets.client.mixins.json",
 			"environment": "client"
 		}
 	],
