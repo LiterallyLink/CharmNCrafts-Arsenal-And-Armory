@@ -29,6 +29,7 @@ public class JustHammersCreativeTabs {
                 entries.add(JustHammersItems.STONE_HAMMER);
                 entries.add(JustHammersItems.IRON_HAMMER);
                 entries.add(JustHammersItems.GOLDEN_HAMMER);
+                entries.add(JustHammersItems.GOLD_HAMMER);
                 entries.add(JustHammersItems.DIAMOND_HAMMER);
                 entries.add(JustHammersItems.NETHERITE_HAMMER);
 
