@@ -41,8 +41,7 @@ public class SmithingTemplateItems {
             Text.translatable(Util.createTranslationKey("item", new Identifier("minecraft", "smithing_template.netherite_upgrade.base_slot_description"))),
             Text.translatable(Util.createTranslationKey("item", new Identifier("minecraft", "smithing_template.netherite_upgrade.additions_slot_description"))),
             createNetheriteUpgradeIconList(),
-            createNetheriteUpgradeMaterialList(),
-            new Item.Settings()
+            createNetheriteUpgradeMaterialList()
         );
     }
 
