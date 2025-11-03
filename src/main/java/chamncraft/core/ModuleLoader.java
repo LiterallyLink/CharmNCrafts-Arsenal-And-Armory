@@ -3,6 +3,7 @@ package chamncraft.core;
 import chamncraft.modules.bedrocktools.BedrockToolsModule;
 import chamncraft.modules.justhammers.JustHammersModule;
 import chamncraft.modules.smithingtemplates.SmithingTemplateExpansionModule;
+import chamncraft.modules.stackedblocks.StackedBlocksModule;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -25,6 +26,7 @@ public class ModuleLoader {
         modules.add(new BedrockToolsModule());
         modules.add(new JustHammersModule());
         modules.add(new SmithingTemplateExpansionModule());
+        modules.add(new StackedBlocksModule());
     }
 
     /**

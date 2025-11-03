@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "stacked_stripped_spruce_logs",
+  "pattern": [
+    "###",
+    "# #",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stripped_spruce_log"
+    }
+  },
+  "result": {
+    "count": 1,
+    "item": "charmncrafts-gears-and-gadgets:stacked_stripped_spruce_logs"
+  }
+}

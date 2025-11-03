@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "stacked_stone_blocks",
+  "pattern": [
+    "###",
+    "# #",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stone"
+    }
+  },
+  "result": {
+    "count": 1,
+    "item": "charmncrafts-gears-and-gadgets:stacked_stone_blocks"
+  }
+}

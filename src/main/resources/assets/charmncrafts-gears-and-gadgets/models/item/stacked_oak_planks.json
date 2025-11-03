@@ -1,0 +1,6 @@
+{
+  "parent": "charmncrafts-gears-and-gadgets:block/stacked_oak_planks",
+  "textures": {
+    "layer0": "charmncrafts-gears-and-gadgets:item/stacked_oak_planks"
+  }
+}

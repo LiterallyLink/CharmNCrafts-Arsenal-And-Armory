@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "stacked_bricks",
+  "pattern": [
+    "###",
+    "# #",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:bricks"
+    }
+  },
+  "result": {
+    "count": 1,
+    "item": "charmncrafts-gears-and-gadgets:stacked_bricks"
+  }
+}

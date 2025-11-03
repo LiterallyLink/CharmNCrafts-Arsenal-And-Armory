@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "side": "charmncrafts-gears-and-gadgets:block/stacked_stripped_crimson_stems_side",
+    "bottom": "charmncrafts-gears-and-gadgets:block/stacked_stripped_crimson_stems_bottom",
+    "top": "charmncrafts-gears-and-gadgets:block/stacked_stripped_crimson_stems_top"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "charmncrafts-gears-and-gadgets:block/stacked_stone_blocks",
+  "textures": {
+    "layer0": "charmncrafts-gears-and-gadgets:item/stacked_stone_blocks"
+  }
+}
