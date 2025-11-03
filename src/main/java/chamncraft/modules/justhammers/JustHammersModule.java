@@ -25,11 +25,11 @@ public class JustHammersModule implements IModule {
     public void initialize() {
         CharmNCraftsMod.LOGGER.info("[JustHammers] Initializing Just Hammers module...");
 
-        // Register creative tabs first
-        JustHammersCreativeTabs.register();
-
-        // Register all items
+        // Register all items FIRST (items must be registered before adding to creative tabs)
         JustHammersItems.register();
+
+        // Register creative tabs second (after items are registered)
+        JustHammersCreativeTabs.register();
 
         CharmNCraftsMod.LOGGER.info("[JustHammers] Just Hammers module initialized!");
     }
