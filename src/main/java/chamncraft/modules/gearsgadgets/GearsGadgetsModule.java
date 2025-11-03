@@ -25,6 +25,9 @@ public class GearsGadgetsModule implements IModule {
     public void initialize() {
         CharmNCraftsMod.LOGGER.info("[GearsGadgets] Initializing Gears & Gadgets module...");
 
+        // Register creative tabs first
+        GearsGadgetsCreativeTabs.register();
+
         // Register all items
         GearsGadgetsItems.register();
 
