@@ -1,21 +1,15 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "equipment",
-  "key": {
-    "a": {
-      "item": "minecraft:netherite_block"
-    },
-    "b": {
-      "item": "minecraft:stick"
-    }
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "minecraft:netherite_upgrade_smithing_template"
   },
-  "pattern": [
-    "aaa",
-    "aba",
-    " b "
-  ],
+  "base": {
+    "item": "charmncrafts-gears-and-gadgets:diamond_hammer"
+  },
+  "addition": {
+    "item": "minecraft:netherite_ingot"
+  },
   "result": {
     "item": "charmncrafts-gears-and-gadgets:netherite_hammer"
-  },
-  "show_notification": true
+  }
 }

@@ -7,14 +7,14 @@
   ],
   "key": {
     "#": {
-      "item": "minecraft:diamond"
+      "item": "minecraft:gold_ingot"
     },
     "/": {
       "item": "minecraft:stick"
     }
   },
   "result": {
-    "item": "charmncrafts-gears-and-gadgets:diamond_hammer",
+    "item": "charmncrafts-gears-and-gadgets:golden_hammer",
     "count": 1
   }
 }

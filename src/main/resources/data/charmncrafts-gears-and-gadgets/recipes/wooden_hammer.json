@@ -7,14 +7,14 @@
   ],
   "key": {
     "#": {
-      "item": "minecraft:diamond"
+      "tag": "minecraft:planks"
     },
     "/": {
       "item": "minecraft:stick"
     }
   },
   "result": {
-    "item": "charmncrafts-gears-and-gadgets:diamond_hammer",
+    "item": "charmncrafts-gears-and-gadgets:wooden_hammer",
     "count": 1
   }
 }
