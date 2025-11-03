@@ -3,7 +3,6 @@ package chamncraft.modules.justhammers;
 import chamncraft.core.CharmNCraftsMod;
 import chamncraft.core.IModule;
 import chamncraft.modules.justhammers.items.JustHammersItems;
-import chamncraft.modules.justhammers.items.JustHammersSmithingTemplates;
 
 /**
  * Just Hammers Module - Powerful mining hammers
@@ -27,7 +26,6 @@ public class JustHammersModule implements IModule {
         CharmNCraftsMod.LOGGER.info("[JustHammers] Initializing Just Hammers module...");
 
         // Register all items FIRST (items must be registered before adding to creative tabs)
-        JustHammersSmithingTemplates.register();
         JustHammersItems.register();
 
         // Register creative tabs second (after items are registered)

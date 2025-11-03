@@ -15,9 +15,6 @@ import net.minecraft.util.Identifier;
 public class JustHammersItems {
 
     // ===== BASIC HAMMERS (3x3 Mining Tools) =====
-    public static final Item WOODEN_HAMMER = new HammerItem(
-            ToolMaterials.WOOD, 2, -3.0F, new Item.Settings());
-
     public static final Item STONE_HAMMER = new HammerItem(
             ToolMaterials.STONE, 3, -3.0F, new Item.Settings());
 
@@ -107,7 +104,6 @@ public class JustHammersItems {
         CharmNCraftsMod.LOGGER.info("[JustHammers] Registering items...");
 
         // Register basic hammers
-        registerItem("wooden_hammer", WOODEN_HAMMER);
         registerItem("stone_hammer", STONE_HAMMER);
         registerItem("iron_hammer", IRON_HAMMER);
         registerItem("golden_hammer", GOLDEN_HAMMER);

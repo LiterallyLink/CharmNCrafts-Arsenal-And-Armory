@@ -5,7 +5,6 @@
   "item.charmncrafts-gears-and-gadgets.bedrock_sword": "Bedrock Sword",
   "item.charmncrafts-gears-and-gadgets.bedrock_hoe": "Bedrock Hoe",
 
-  "item.charmncrafts-gears-and-gadgets.wooden_hammer": "Wooden Hammer",
   "item.charmncrafts-gears-and-gadgets.stone_hammer": "Stone Hammer",
   "item.charmncrafts-gears-and-gadgets.iron_hammer": "Iron Hammer",
   "item.charmncrafts-gears-and-gadgets.golden_hammer": "Golden Hammer",
@@ -45,5 +44,6 @@
 
   "itemGroup.charmncrafts.arsenal": "Arsenal & Armory",
   "itemGroup.charmncrafts.gearsgadgets": "Gears & Gadgets",
-  "itemGroup.charmncrafts.justhammers": "Just Hammers"
+  "itemGroup.charmncrafts.justhammers": "Just Hammers",
+  "itemGroup.charmncrafts.smithingtemplates": "Smithing Template Expansion"
 }

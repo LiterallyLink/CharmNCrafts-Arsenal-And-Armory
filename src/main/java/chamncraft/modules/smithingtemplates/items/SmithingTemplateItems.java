@@ -1,4 +1,4 @@
-package chamncraft.modules.justhammers.items;
+package chamncraft.modules.smithingtemplates.items;
 
 import chamncraft.core.CharmNCraftsMod;
 import net.minecraft.item.Item;
@@ -7,11 +7,11 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 /**
- * JustHammersSmithingTemplates - Manages all smithing template items for hammer upgrades.
+ * SmithingTemplateItems - Manages all smithing template items.
  */
-public class JustHammersSmithingTemplates {
+public class SmithingTemplateItems {
 
-    // Smithing templates for hammer upgrades
+    // Smithing templates for various upgrades
     public static final Item BLANK_SMITHING_TEMPLATE = new Item(new Item.Settings());
     public static final Item BLANK_NETHERITE_SMITHING_TEMPLATE = new Item(new Item.Settings());
     public static final Item IRON_SMITHING_TEMPLATE = new Item(new Item.Settings());
@@ -22,7 +22,7 @@ public class JustHammersSmithingTemplates {
      * Register all smithing template items.
      */
     public static void register() {
-        CharmNCraftsMod.LOGGER.info("[JustHammers] Registering smithing templates...");
+        CharmNCraftsMod.LOGGER.info("[SmithingTemplates] Registering smithing templates...");
 
         registerItem("blank_smithing_template", BLANK_SMITHING_TEMPLATE);
         registerItem("blank_netherite_smithing_template", BLANK_NETHERITE_SMITHING_TEMPLATE);
@@ -30,7 +30,7 @@ public class JustHammersSmithingTemplates {
         registerItem("gold_smithing_template", GOLD_SMITHING_TEMPLATE);
         registerItem("netherite_smithing_template", NETHERITE_SMITHING_TEMPLATE);
 
-        CharmNCraftsMod.LOGGER.info("[JustHammers] Smithing templates registered!");
+        CharmNCraftsMod.LOGGER.info("[SmithingTemplates] Smithing templates registered!");
     }
 
     private static void registerItem(String name, Item item) {
