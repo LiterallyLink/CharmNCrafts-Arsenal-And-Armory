@@ -1,1 +1,6 @@
-{"parent": "item/handheld", "textures": {"layer0": "charmncrafts-gears-and-gadgets:item/fabled_iron_hammer"}}
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "charmncrafts-gears-and-gadgets:item/fabled_iron_hammer"
+  }
+}

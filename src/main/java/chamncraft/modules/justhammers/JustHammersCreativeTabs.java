@@ -2,6 +2,7 @@ package chamncraft.modules.justhammers;
 
 import chamncraft.core.CharmNCraftsMod;
 import chamncraft.modules.justhammers.items.JustHammersItems;
+import chamncraft.modules.justhammers.items.JustHammersSmithingTemplates;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -25,13 +26,48 @@ public class JustHammersCreativeTabs {
             .displayName(Text.translatable("itemGroup.charmncrafts.justhammers"))
             .icon(() -> new ItemStack(JustHammersItems.DIAMOND_HAMMER))
             .entries((displayContext, entries) -> {
-                // Add all hammers to the tab in tier order
+                // Basic hammers
                 entries.add(JustHammersItems.WOODEN_HAMMER);
                 entries.add(JustHammersItems.STONE_HAMMER);
                 entries.add(JustHammersItems.IRON_HAMMER);
                 entries.add(JustHammersItems.GOLDEN_HAMMER);
                 entries.add(JustHammersItems.DIAMOND_HAMMER);
                 entries.add(JustHammersItems.NETHERITE_HAMMER);
+
+                // Refined hammers
+                entries.add(JustHammersItems.REFINED_STONE_HAMMER);
+                entries.add(JustHammersItems.REFINED_IRON_HAMMER);
+                entries.add(JustHammersItems.REFINED_GOLD_HAMMER);
+                entries.add(JustHammersItems.REFINED_DIAMOND_HAMMER);
+                entries.add(JustHammersItems.REFINED_NETHERITE_HAMMER);
+
+                // Reinforced hammers
+                entries.add(JustHammersItems.REINFORCED_STONE_HAMMER);
+                entries.add(JustHammersItems.REINFORCED_IRON_HAMMER);
+                entries.add(JustHammersItems.REINFORCED_GOLD_HAMMER);
+                entries.add(JustHammersItems.REINFORCED_DIAMOND_HAMMER);
+                entries.add(JustHammersItems.REINFORCED_NETHERITE_HAMMER);
+
+                // Fortified hammers
+                entries.add(JustHammersItems.FORTIFIED_STONE_HAMMER);
+                entries.add(JustHammersItems.FORTIFIED_IRON_HAMMER);
+                entries.add(JustHammersItems.FORTIFIED_GOLD_HAMMER);
+                entries.add(JustHammersItems.FORTIFIED_DIAMOND_HAMMER);
+                entries.add(JustHammersItems.FORTIFIED_NETHERITE_HAMMER);
+
+                // Fabled hammers
+                entries.add(JustHammersItems.FABLED_STONE_HAMMER);
+                entries.add(JustHammersItems.FABLED_IRON_HAMMER);
+                entries.add(JustHammersItems.FABLED_GOLD_HAMMER);
+                entries.add(JustHammersItems.FABLED_DIAMOND_HAMMER);
+                entries.add(JustHammersItems.FABLED_NETHERITE_HAMMER);
+
+                // Smithing templates
+                entries.add(JustHammersSmithingTemplates.BLANK_SMITHING_TEMPLATE);
+                entries.add(JustHammersSmithingTemplates.IRON_SMITHING_TEMPLATE);
+                entries.add(JustHammersSmithingTemplates.GOLD_SMITHING_TEMPLATE);
+                entries.add(JustHammersSmithingTemplates.BLANK_NETHERITE_SMITHING_TEMPLATE);
+                entries.add(JustHammersSmithingTemplates.NETHERITE_SMITHING_TEMPLATE);
             })
             .build()
     );
