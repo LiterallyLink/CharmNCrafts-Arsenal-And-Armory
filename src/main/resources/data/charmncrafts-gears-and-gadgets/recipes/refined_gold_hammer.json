@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "a": {
+      "item": "minecraft:gold_block"
+    },
+    "b": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "aaa",
+    "aba",
+    " b "
+  ],
+  "result": {
+    "item": "charmncrafts-gears-and-gadgets:refined_gold_hammer"
+  },
+  "show_notification": true
+}
