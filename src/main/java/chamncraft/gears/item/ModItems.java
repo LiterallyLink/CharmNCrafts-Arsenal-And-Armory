@@ -64,28 +64,7 @@ public class ModItems {
     
     public static final Item NETHERITE_SMITHING_TEMPLATE = registerItem("netherite_smithing_template",
             new Item(new Item.Settings().maxCount(64)));
-    
-    // ===== BEDROCK TOOLS =====
-    public static final Item BEDROCK_PICKAXE = registerItem("bedrock_pickaxe",
-            new CustomBedrockPickaxeItem(BedrockToolMaterial.INSTANCE, 1, -2.8F, 
-                    new Item.Settings()));
-    
-    public static final Item BEDROCK_AXE = registerItem("bedrock_axe",
-            new CustomBedrockAxeItem(BedrockToolMaterial.INSTANCE, 7.0F, -3.2F, 
-                    new Item.Settings()));
-    
-    public static final Item BEDROCK_SHOVEL = registerItem("bedrock_shovel",
-            new ShovelItem(BedrockToolMaterial.INSTANCE, 1.5F, -3.0F, 
-                    new Item.Settings()));
-    
-    public static final Item BEDROCK_SWORD = registerItem("bedrock_sword",
-            new SwordItem(BedrockToolMaterial.INSTANCE, 3, -2.4F, 
-                    new Item.Settings()));
-    
-    public static final Item BEDROCK_HOE = registerItem("bedrock_hoe",
-            new CustomBedrockHoeItem(BedrockToolMaterial.INSTANCE, -2, -1.0F, 
-                    new Item.Settings()));
-    
+
     // ===== STONE HAMMERS =====
     public static final Item STONE_HAMMER = registerItem("stone_hammer",
             new CustomHammerItem(STONE_HAMMER_MATERIAL, 1, -2.8F, 
@@ -203,20 +182,7 @@ public class ModItems {
         
         // Register custom creative tabs
         registerCreativeTabs();
-        
-        // Add bedrock tools to Tools tab
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(entries -> {
-            entries.add(ModItems.BEDROCK_PICKAXE);
-            entries.add(ModItems.BEDROCK_AXE);
-            entries.add(ModItems.BEDROCK_SHOVEL);
-            entries.add(ModItems.BEDROCK_HOE);
-        });
-        
-        // Add bedrock sword to Combat tab
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(entries -> {
-            entries.add(ModItems.BEDROCK_SWORD);
-        });
-        
+
         // Add smithing templates to Ingredients tab
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
             entries.add(ModItems.BLANK_SMITHING_TEMPLATE);
