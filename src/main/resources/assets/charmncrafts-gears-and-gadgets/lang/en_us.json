@@ -3,5 +3,8 @@
   "item.charmncrafts-gears-and-gadgets.bedrock_axe": "Bedrock Axe",
   "item.charmncrafts-gears-and-gadgets.bedrock_shovel": "Bedrock Shovel",
   "item.charmncrafts-gears-and-gadgets.bedrock_sword": "Bedrock Sword",
-  "item.charmncrafts-gears-and-gadgets.bedrock_hoe": "Bedrock Hoe"
+  "item.charmncrafts-gears-and-gadgets.bedrock_hoe": "Bedrock Hoe",
+
+  "itemGroup.charmncrafts.arsenal": "Arsenal & Armory",
+  "itemGroup.charmncrafts.gearsgadgets": "Gears & Gadgets"
 }

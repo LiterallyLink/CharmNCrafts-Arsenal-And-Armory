@@ -7,6 +7,8 @@ CharmNCrafts now uses a **modular architecture** that makes it easy to organize 
 ## Current Modules
 
 ### Arsenal & Armory
+**Creative Tab:** Arsenal & Armory
+
 **Items Added:**
 - Bedrock Pickaxe (Unbreakable)
 - Bedrock Axe (Unbreakable)
@@ -15,7 +17,9 @@ CharmNCrafts now uses a **modular architecture** that makes it easy to organize 
 - Bedrock Hoe (Unbreakable)
 
 ### Gears & Gadgets
-Ready for your utility items and gadgets! (Template created)
+**Creative Tab:** Gears & Gadgets
+
+Ready for your utility items and gadgets! (Template created with custom creative tab)
 
 ## How to Add New Modules
 
@@ -32,12 +36,30 @@ Ready for your utility items and gadgets! (Template created)
        public String getModuleId() { return "yourmodule"; }
        public String getModuleName() { return "Your Module"; }
        public void initialize() {
+           YourModuleCreativeTabs.register();
            YourModuleItems.register();
        }
    }
    ```
 
-3. **Create YourModuleItems.java:**
+3. **Create YourModuleCreativeTabs.java:**
+   ```java
+   public class YourModuleCreativeTabs {
+       public static final ItemGroup YOUR_TAB = Registry.register(
+           Registries.ITEM_GROUP,
+           new Identifier(CharmNCraftsMod.MOD_ID, "yourmodule"),
+           FabricItemGroup.builder()
+               .displayName(Text.translatable("itemGroup.charmncrafts.yourmodule"))
+               .icon(() -> new ItemStack(YourModuleItems.YOUR_ITEM))
+               .entries((displayContext, entries) -> {
+                   entries.add(YourModuleItems.YOUR_ITEM);
+               })
+               .build()
+       );
+   }
+   ```
+
+4. **Create YourModuleItems.java:**
    ```java
    public class YourModuleItems {
        public static final Item YOUR_ITEM = new Item(new Item.Settings());
@@ -48,7 +70,14 @@ Ready for your utility items and gadgets! (Template created)
    }
    ```
 
-4. **Register in ModuleLoader.java:**
+5. **Add translation to en_us.json:**
+   ```json
+   {
+     "itemGroup.charmncrafts.yourmodule": "Your Module Name"
+   }
+   ```
+
+6. **Register in ModuleLoader.java:**
    ```java
    modules.add(new YourModule());
    ```

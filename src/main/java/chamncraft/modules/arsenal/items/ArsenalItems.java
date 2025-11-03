@@ -64,20 +64,15 @@ public class ArsenalItems {
 
     /**
      * Add items to creative mode tabs.
+     * Items are automatically added to the Arsenal creative tab via ArsenalCreativeTabs.
+     * This method can be used to add items to vanilla tabs if desired.
      */
     private static void addToCreativeTabs() {
-        // Add bedrock tools to Tools tab
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(entries -> {
-            entries.add(BEDROCK_PICKAXE);
-            entries.add(BEDROCK_AXE);
-            entries.add(BEDROCK_SHOVEL);
-            entries.add(BEDROCK_HOE);
-        });
-
-        // Add bedrock sword to Combat tab
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(entries -> {
-            entries.add(BEDROCK_SWORD);
-            entries.add(BEDROCK_AXE);
-        });
+        // Items are automatically added to the Arsenal creative tab
+        // You can optionally add items to vanilla tabs here
+        // Example:
+        // ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(entries -> {
+        //     entries.add(BEDROCK_PICKAXE);
+        // });
     }
 }

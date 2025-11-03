@@ -25,6 +25,9 @@ public class ArsenalModule implements IModule {
     public void initialize() {
         CharmNCraftsMod.LOGGER.info("[Arsenal] Initializing Arsenal & Armory module...");
 
+        // Register creative tabs first
+        ArsenalCreativeTabs.register();
+
         // Register all items
         ArsenalItems.register();
 

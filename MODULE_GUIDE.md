@@ -74,6 +74,9 @@ public class YourModule implements IModule {
     public void initialize() {
         CharmNCraftsMod.LOGGER.info("[YourModule] Initializing...");
 
+        // Register creative tabs first
+        YourModuleCreativeTabs.register();
+
         // Register your content
         YourModuleItems.register();
 
@@ -124,7 +127,53 @@ public class YourModuleItems {
 }
 ```
 
-### Step 4: Register Module
+### Step 4: Create Creative Tab
+
+Create a creative tab for your module:
+
+```java
+package chamncraft.modules.yourmodule;
+
+import chamncraft.core.CharmNCraftsMod;
+import chamncraft.modules.yourmodule.items.YourModuleItems;
+import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
+import net.minecraft.text.Text;
+import net.minecraft.util.Identifier;
+
+public class YourModuleCreativeTabs {
+
+    public static final ItemGroup YOUR_TAB = Registry.register(
+        Registries.ITEM_GROUP,
+        new Identifier(CharmNCraftsMod.MOD_ID, "yourmodule"),
+        FabricItemGroup.builder()
+            .displayName(Text.translatable("itemGroup.charmncrafts.yourmodule"))
+            .icon(() -> new ItemStack(YourModuleItems.YOUR_ITEM))
+            .entries((displayContext, entries) -> {
+                // Add all your items to the tab
+                entries.add(YourModuleItems.YOUR_ITEM);
+            })
+            .build()
+    );
+
+    public static void register() {
+        CharmNCraftsMod.LOGGER.info("[YourModule] Registering creative tabs...");
+    }
+}
+```
+
+Then add the translation to `src/main/resources/assets/charmncrafts-gears-and-gadgets/lang/en_us.json`:
+
+```json
+{
+  "itemGroup.charmncrafts.yourmodule": "Your Module Name"
+}
+```
+
+### Step 5: Register Module
 
 Add your module to `ModuleLoader.java`:
 
