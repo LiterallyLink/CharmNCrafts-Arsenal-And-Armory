@@ -1,7 +1,7 @@
 package chamncraft.core;
 
 import chamncraft.modules.bedrocktools.BedrockToolsModule;
-import chamncraft.modules.gearsgadgets.GearsGadgetsModule;
+// import chamncraft.modules.gearsgadgets.GearsGadgetsModule; // Disabled until items are added
 import chamncraft.modules.justhammers.JustHammersModule;
 import chamncraft.modules.smithingtemplates.SmithingTemplateExpansionModule;
 
@@ -26,7 +26,7 @@ public class ModuleLoader {
         modules.add(new BedrockToolsModule());
         modules.add(new JustHammersModule());
         modules.add(new SmithingTemplateExpansionModule());
-        modules.add(new GearsGadgetsModule());
+        // modules.add(new GearsGadgetsModule()); // Disabled until items are added
     }
 
     /**
