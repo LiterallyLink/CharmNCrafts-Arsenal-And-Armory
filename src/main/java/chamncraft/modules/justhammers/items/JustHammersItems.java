@@ -21,9 +21,6 @@ public class JustHammersItems {
     public static final Item IRON_HAMMER = new HammerItem(
             ToolMaterials.IRON, 4, -3.0F, new Item.Settings());
 
-    public static final Item GOLDEN_HAMMER = new HammerItem(
-            ToolMaterials.GOLD, 2, -3.0F, new Item.Settings());
-
     public static final Item GOLD_HAMMER = new HammerItem(
             ToolMaterials.GOLD, 2, -3.0F, new Item.Settings());
 
@@ -106,7 +103,6 @@ public class JustHammersItems {
         // Register basic hammers
         registerItem("stone_hammer", STONE_HAMMER);
         registerItem("iron_hammer", IRON_HAMMER);
-        registerItem("golden_hammer", GOLDEN_HAMMER);
         registerItem("gold_hammer", GOLD_HAMMER);
         registerItem("diamond_hammer", DIAMOND_HAMMER);
         registerItem("netherite_hammer", NETHERITE_HAMMER);
