@@ -31,24 +31,24 @@ public class SmithingTemplateItems {
 
     /**
      * Creates a smithing template item for upgrading equipment.
-     * Similar to the netherite upgrade template.
+     * For bedrock upgrade (netherite + bedrock = bedrock).
      */
     private static SmithingTemplateItem createUpgradeTemplate() {
         return new SmithingTemplateItem(
-            Text.translatable(Util.createTranslationKey("item", new Identifier("minecraft", "smithing_template.netherite_upgrade.applies_to"))).fillStyle(DESCRIPTION_FORMATTING),
-            Text.translatable(Util.createTranslationKey("item", new Identifier("minecraft", "smithing_template.netherite_upgrade.ingredients"))).fillStyle(DESCRIPTION_FORMATTING),
-            Text.translatable(Util.createTranslationKey("upgrade", new Identifier("minecraft", "netherite_upgrade"))).fillStyle(TITLE_FORMATTING),
-            Text.translatable(Util.createTranslationKey("item", new Identifier("minecraft", "smithing_template.netherite_upgrade.base_slot_description"))),
-            Text.translatable(Util.createTranslationKey("item", new Identifier("minecraft", "smithing_template.netherite_upgrade.additions_slot_description"))),
-            createNetheriteUpgradeIconList(),
-            createNetheriteUpgradeMaterialList()
+            Text.translatable(Util.createTranslationKey("item", new Identifier(CharmNCraftsMod.MOD_ID, "smithing_template.bedrock_upgrade.applies_to"))).fillStyle(DESCRIPTION_FORMATTING),
+            Text.translatable(Util.createTranslationKey("item", new Identifier(CharmNCraftsMod.MOD_ID, "smithing_template.bedrock_upgrade.ingredients"))).fillStyle(DESCRIPTION_FORMATTING),
+            Text.translatable(Util.createTranslationKey("upgrade", new Identifier(CharmNCraftsMod.MOD_ID, "bedrock_upgrade"))).fillStyle(TITLE_FORMATTING),
+            Text.translatable(Util.createTranslationKey("item", new Identifier(CharmNCraftsMod.MOD_ID, "smithing_template.bedrock_upgrade.base_slot_description"))),
+            Text.translatable(Util.createTranslationKey("item", new Identifier(CharmNCraftsMod.MOD_ID, "smithing_template.bedrock_upgrade.additions_slot_description"))),
+            createBedrockUpgradeIconList(),
+            createBedrockUpgradeMaterialList()
         );
     }
 
     /**
-     * Creates the list of empty slot icons for the base slot.
+     * Creates the list of empty slot icons for the base slot (netherite equipment).
      */
-    private static List<Identifier> createNetheriteUpgradeIconList() {
+    private static List<Identifier> createBedrockUpgradeIconList() {
         return List.of(
             new Identifier("item/empty_armor_slot_helmet"),
             new Identifier("item/empty_slot_sword"),
@@ -63,11 +63,11 @@ public class SmithingTemplateItems {
     }
 
     /**
-     * Creates the list of empty slot icons for the additions slot.
+     * Creates the list of empty slot icons for the additions slot (bedrock).
      */
-    private static List<Identifier> createNetheriteUpgradeMaterialList() {
+    private static List<Identifier> createBedrockUpgradeMaterialList() {
         return List.of(
-            new Identifier("item/empty_slot_ingot")
+            new Identifier("item/empty_slot_block")
         );
     }
 

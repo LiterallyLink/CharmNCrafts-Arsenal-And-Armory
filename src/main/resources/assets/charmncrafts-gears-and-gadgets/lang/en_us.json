@@ -41,6 +41,12 @@
   "item.charmncrafts-gears-and-gadgets.gold_smithing_template": "Gold Smithing Template",
   "item.charmncrafts-gears-and-gadgets.netherite_smithing_template": "Netherite Smithing Template",
 
+  "upgrade.charmncrafts-gears-and-gadgets.bedrock_upgrade": "Bedrock Upgrade",
+  "item.charmncrafts-gears-and-gadgets.smithing_template.bedrock_upgrade.applies_to": "Netherite Equipment",
+  "item.charmncrafts-gears-and-gadgets.smithing_template.bedrock_upgrade.ingredients": "Bedrock",
+  "item.charmncrafts-gears-and-gadgets.smithing_template.bedrock_upgrade.base_slot_description": "Add netherite armor, weapon, or tool",
+  "item.charmncrafts-gears-and-gadgets.smithing_template.bedrock_upgrade.additions_slot_description": "Add Bedrock",
+
   "itemGroup.charmncrafts.bedrocktools": "Bedrock Tools",
   "itemGroup.charmncrafts.justhammers": "Just Hammers",
   "itemGroup.charmncrafts.smithingtemplates": "Smithing Template Expansion"
