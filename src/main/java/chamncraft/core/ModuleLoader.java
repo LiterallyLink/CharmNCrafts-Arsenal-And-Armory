@@ -2,6 +2,7 @@ package chamncraft.core;
 
 import chamncraft.modules.arsenal.ArsenalModule;
 import chamncraft.modules.gearsgadgets.GearsGadgetsModule;
+import chamncraft.modules.justhammers.JustHammersModule;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -22,11 +23,8 @@ public class ModuleLoader {
     private static void registerModules() {
         // Register modules in order
         modules.add(new ArsenalModule());
+        modules.add(new JustHammersModule());
         modules.add(new GearsGadgetsModule());
-
-        // Add more modules here as they are created
-        // modules.add(new ArmorModule());
-        // modules.add(new MagicModule());
     }
 
     /**
