@@ -1,6 +1,6 @@
 package chamncraft.core;
 
-import chamncraft.modules.arsenal.ArsenalModule;
+import chamncraft.modules.bedrocktools.BedrockToolsModule;
 import chamncraft.modules.gearsgadgets.GearsGadgetsModule;
 import chamncraft.modules.justhammers.JustHammersModule;
 import chamncraft.modules.smithingtemplates.SmithingTemplateExpansionModule;
@@ -23,7 +23,7 @@ public class ModuleLoader {
      */
     private static void registerModules() {
         // Register modules in order
-        modules.add(new ArsenalModule());
+        modules.add(new BedrockToolsModule());
         modules.add(new JustHammersModule());
         modules.add(new SmithingTemplateExpansionModule());
         modules.add(new GearsGadgetsModule());

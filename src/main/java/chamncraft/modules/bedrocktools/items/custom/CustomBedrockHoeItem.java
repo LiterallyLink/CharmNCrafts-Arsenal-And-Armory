@@ -1,4 +1,4 @@
-package chamncraft.modules.arsenal.items.custom;
+package chamncraft.modules.bedrocktools.items.custom;
 
 import net.minecraft.item.HoeItem;
 import net.minecraft.item.ToolMaterial;

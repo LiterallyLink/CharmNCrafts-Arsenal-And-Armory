@@ -1,19 +1,18 @@
-package chamncraft.modules.arsenal.items;
+package chamncraft.modules.bedrocktools.items;
 
 import chamncraft.core.CharmNCraftsMod;
-import chamncraft.modules.arsenal.items.custom.*;
-import chamncraft.modules.arsenal.items.materials.BedrockToolMaterial;
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import chamncraft.modules.bedrocktools.items.custom.*;
+import chamncraft.modules.bedrocktools.items.materials.BedrockToolMaterial;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 /**
- * ArsenalItems - Manages all items in the Arsenal module.
- * This includes weapons, tools, and combat equipment.
+ * BedrockToolsItems - Manages all items in the Bedrock Tools module.
+ * This includes all bedrock-tier tools and weapons.
  */
-public class ArsenalItems {
+public class BedrockToolsItems {
 
     // ===== MATERIALS =====
     public static final ToolMaterial BEDROCK_MATERIAL = BedrockToolMaterial.INSTANCE;
@@ -35,11 +34,11 @@ public class ArsenalItems {
             BEDROCK_MATERIAL, -2, -1.0F, new Item.Settings());
 
     /**
-     * Register all Arsenal items.
+     * Register all Bedrock Tools items.
      * Called during module initialization.
      */
     public static void register() {
-        CharmNCraftsMod.LOGGER.info("[Arsenal] Registering items...");
+        CharmNCraftsMod.LOGGER.info("[BedrockTools] Registering items...");
 
         // Register items
         registerItem("bedrock_pickaxe", BEDROCK_PICKAXE);
@@ -48,10 +47,7 @@ public class ArsenalItems {
         registerItem("bedrock_sword", BEDROCK_SWORD);
         registerItem("bedrock_hoe", BEDROCK_HOE);
 
-        // Add to creative tabs
-        addToCreativeTabs();
-
-        CharmNCraftsMod.LOGGER.info("[Arsenal] Items registered successfully!");
+        CharmNCraftsMod.LOGGER.info("[BedrockTools] Items registered successfully!");
     }
 
     /**
@@ -60,19 +56,5 @@ public class ArsenalItems {
     private static void registerItem(String name, Item item) {
         Registry.register(Registries.ITEM,
             new Identifier(CharmNCraftsMod.MOD_ID, name), item);
-    }
-
-    /**
-     * Add items to creative mode tabs.
-     * Items are automatically added to the Arsenal creative tab via ArsenalCreativeTabs.
-     * This method can be used to add items to vanilla tabs if desired.
-     */
-    private static void addToCreativeTabs() {
-        // Items are automatically added to the Arsenal creative tab
-        // You can optionally add items to vanilla tabs here
-        // Example:
-        // ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(entries -> {
-        //     entries.add(BEDROCK_PICKAXE);
-        // });
     }
 }
