@@ -2,7 +2,6 @@ package chamncraft.modules.justhammers;
 
 import chamncraft.core.CharmNCraftsMod;
 import chamncraft.modules.justhammers.items.JustHammersItems;
-import chamncraft.modules.justhammers.items.JustHammersSmithingTemplates;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -27,7 +26,6 @@ public class JustHammersCreativeTabs {
             .icon(() -> new ItemStack(JustHammersItems.DIAMOND_HAMMER))
             .entries((displayContext, entries) -> {
                 // Basic hammers
-                entries.add(JustHammersItems.WOODEN_HAMMER);
                 entries.add(JustHammersItems.STONE_HAMMER);
                 entries.add(JustHammersItems.IRON_HAMMER);
                 entries.add(JustHammersItems.GOLDEN_HAMMER);
@@ -61,13 +59,6 @@ public class JustHammersCreativeTabs {
                 entries.add(JustHammersItems.FABLED_GOLD_HAMMER);
                 entries.add(JustHammersItems.FABLED_DIAMOND_HAMMER);
                 entries.add(JustHammersItems.FABLED_NETHERITE_HAMMER);
-
-                // Smithing templates
-                entries.add(JustHammersSmithingTemplates.BLANK_SMITHING_TEMPLATE);
-                entries.add(JustHammersSmithingTemplates.IRON_SMITHING_TEMPLATE);
-                entries.add(JustHammersSmithingTemplates.GOLD_SMITHING_TEMPLATE);
-                entries.add(JustHammersSmithingTemplates.BLANK_NETHERITE_SMITHING_TEMPLATE);
-                entries.add(JustHammersSmithingTemplates.NETHERITE_SMITHING_TEMPLATE);
             })
             .build()
     );
