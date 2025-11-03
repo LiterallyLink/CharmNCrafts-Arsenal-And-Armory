@@ -5,7 +5,9 @@ import net.minecraft.item.Item;
 import net.minecraft.item.SmithingTemplateItem;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.text.Style;
 import net.minecraft.text.Text;
+import net.minecraft.util.Formatting;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Util;
 
@@ -15,6 +17,10 @@ import java.util.List;
  * SmithingTemplateItems - Manages all smithing template items.
  */
 public class SmithingTemplateItems {
+
+    // Text formatting styles for smithing templates
+    private static final Style TITLE_FORMATTING = Style.EMPTY.withColor(Formatting.GRAY).withItalic(false);
+    private static final Style DESCRIPTION_FORMATTING = Style.EMPTY.withColor(Formatting.BLUE).withItalic(false);
 
     // Smithing templates for various upgrades
     public static final Item BLANK_SMITHING_TEMPLATE = new Item(new Item.Settings());
@@ -29,9 +35,9 @@ public class SmithingTemplateItems {
      */
     private static SmithingTemplateItem createUpgradeTemplate() {
         return new SmithingTemplateItem(
-            Text.translatable(Util.createTranslationKey("item", new Identifier("minecraft", "smithing_template.netherite_upgrade.applies_to"))).fillStyle(SmithingTemplateItem.DESCRIPTION_FORMATTING),
-            Text.translatable(Util.createTranslationKey("item", new Identifier("minecraft", "smithing_template.netherite_upgrade.ingredients"))).fillStyle(SmithingTemplateItem.DESCRIPTION_FORMATTING),
-            Text.translatable(Util.createTranslationKey("upgrade", new Identifier("minecraft", "netherite_upgrade"))).fillStyle(SmithingTemplateItem.TITLE_FORMATTING),
+            Text.translatable(Util.createTranslationKey("item", new Identifier("minecraft", "smithing_template.netherite_upgrade.applies_to"))).fillStyle(DESCRIPTION_FORMATTING),
+            Text.translatable(Util.createTranslationKey("item", new Identifier("minecraft", "smithing_template.netherite_upgrade.ingredients"))).fillStyle(DESCRIPTION_FORMATTING),
+            Text.translatable(Util.createTranslationKey("upgrade", new Identifier("minecraft", "netherite_upgrade"))).fillStyle(TITLE_FORMATTING),
             Text.translatable(Util.createTranslationKey("item", new Identifier("minecraft", "smithing_template.netherite_upgrade.base_slot_description"))),
             Text.translatable(Util.createTranslationKey("item", new Identifier("minecraft", "smithing_template.netherite_upgrade.additions_slot_description"))),
             createNetheriteUpgradeIconList(),
