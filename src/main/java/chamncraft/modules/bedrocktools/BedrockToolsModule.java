@@ -25,11 +25,11 @@ public class BedrockToolsModule implements IModule {
     public void initialize() {
         CharmNCraftsMod.LOGGER.info("[BedrockTools] Initializing Bedrock Tools module...");
 
-        // Register creative tabs first
-        BedrockToolsCreativeTabs.register();
-
-        // Register all items
+        // Register all items first (items must be registered before adding to creative tabs)
         BedrockToolsItems.register();
+
+        // Register creative tabs
+        BedrockToolsCreativeTabs.register();
 
         CharmNCraftsMod.LOGGER.info("[BedrockTools] Bedrock Tools module initialized!");
     }
