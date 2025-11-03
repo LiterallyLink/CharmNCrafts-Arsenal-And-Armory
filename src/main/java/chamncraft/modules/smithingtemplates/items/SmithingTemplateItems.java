@@ -2,9 +2,14 @@ package chamncraft.modules.smithingtemplates.items;
 
 import chamncraft.core.CharmNCraftsMod;
 import net.minecraft.item.Item;
+import net.minecraft.item.SmithingTemplateItem;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Util;
+
+import java.util.List;
 
 /**
  * SmithingTemplateItems - Manages all smithing template items.
@@ -14,9 +19,52 @@ public class SmithingTemplateItems {
     // Smithing templates for various upgrades
     public static final Item BLANK_SMITHING_TEMPLATE = new Item(new Item.Settings());
     public static final Item BLANK_NETHERITE_SMITHING_TEMPLATE = new Item(new Item.Settings());
-    public static final Item IRON_SMITHING_TEMPLATE = new Item(new Item.Settings());
-    public static final Item GOLD_SMITHING_TEMPLATE = new Item(new Item.Settings());
-    public static final Item NETHERITE_SMITHING_TEMPLATE = new Item(new Item.Settings());
+    public static final Item IRON_SMITHING_TEMPLATE = createUpgradeTemplate();
+    public static final Item GOLD_SMITHING_TEMPLATE = createUpgradeTemplate();
+    public static final Item NETHERITE_SMITHING_TEMPLATE = createUpgradeTemplate();
+
+    /**
+     * Creates a smithing template item for upgrading equipment.
+     * Similar to the netherite upgrade template.
+     */
+    private static SmithingTemplateItem createUpgradeTemplate() {
+        return new SmithingTemplateItem(
+            Text.translatable(Util.createTranslationKey("item", new Identifier("minecraft", "smithing_template.netherite_upgrade.applies_to"))).fillStyle(SmithingTemplateItem.DESCRIPTION_FORMATTING),
+            Text.translatable(Util.createTranslationKey("item", new Identifier("minecraft", "smithing_template.netherite_upgrade.ingredients"))).fillStyle(SmithingTemplateItem.DESCRIPTION_FORMATTING),
+            Text.translatable(Util.createTranslationKey("upgrade", new Identifier("minecraft", "netherite_upgrade"))).fillStyle(SmithingTemplateItem.TITLE_FORMATTING),
+            Text.translatable(Util.createTranslationKey("item", new Identifier("minecraft", "smithing_template.netherite_upgrade.base_slot_description"))),
+            Text.translatable(Util.createTranslationKey("item", new Identifier("minecraft", "smithing_template.netherite_upgrade.additions_slot_description"))),
+            createNetheriteUpgradeIconList(),
+            createNetheriteUpgradeMaterialList(),
+            new Item.Settings()
+        );
+    }
+
+    /**
+     * Creates the list of empty slot icons for the base slot.
+     */
+    private static List<Identifier> createNetheriteUpgradeIconList() {
+        return List.of(
+            new Identifier("item/empty_armor_slot_helmet"),
+            new Identifier("item/empty_slot_sword"),
+            new Identifier("item/empty_armor_slot_chestplate"),
+            new Identifier("item/empty_slot_pickaxe"),
+            new Identifier("item/empty_armor_slot_leggings"),
+            new Identifier("item/empty_slot_axe"),
+            new Identifier("item/empty_armor_slot_boots"),
+            new Identifier("item/empty_slot_hoe"),
+            new Identifier("item/empty_slot_shovel")
+        );
+    }
+
+    /**
+     * Creates the list of empty slot icons for the additions slot.
+     */
+    private static List<Identifier> createNetheriteUpgradeMaterialList() {
+        return List.of(
+            new Identifier("item/empty_slot_ingot")
+        );
+    }
 
     /**
      * Register all smithing template items.
