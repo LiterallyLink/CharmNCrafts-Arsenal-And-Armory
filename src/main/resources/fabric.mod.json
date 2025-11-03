@@ -2,27 +2,27 @@
 	"schemaVersion": 1,
 	"id": "charmncrafts-gears-and-gadgets",
 	"version": "${version}",
-	"name": "CharmNCrafts Gears and Gadgets",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"name": "CharmNCrafts: Gears and Gadgets",
+	"description": "A modular Minecraft mod featuring Arsenal & Armory, Gears & Gadgets, and more! Adds powerful tools, weapons, and utility items to enhance your gameplay.",
 	"authors": [
-		"Me!"
+		"CharmNCrafts Team"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://github.com/LiterallyLink/CharmNCrafts-Arsenal-And-Armory",
+		"sources": "https://github.com/LiterallyLink/CharmNCrafts-Arsenal-And-Armory"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/charmncrafts-gears-and-gadgets/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"chamncraft.gears.CharmncraftsGearsAndGadgets"
+			"chamncraft.core.CharmNCraftsMod"
 		],
 		"client": [
-			"chamncraft.gears.CharmncraftsGearsAndGadgetsClient"
+			"chamncraft.core.CharmNCraftsModClient"
 		],
 		"fabric-datagen": [
-			"chamncraft.gears.CharmncraftsGearsAndGadgetsDataGenerator"
+			"chamncraft.core.CharmNCraftsModDataGenerator"
 		]
 	},
 	"mixins": [
